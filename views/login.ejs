@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel='stylesheet' href='stylesheets/style.css'/>
+    <script src="Javascript/login.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="main">
+        <img class="img-fluid" src="/images/saturn.jpg" alt="...">
+        <div style="text-align:center" class="container-fluid">
+            <p class="sign"><%= title %></p></div>
+
+        <form action="/login" method="post" onsubmit="return validate_form(this)">
+            <input class="un" type="email" id="email" name="email" placeholder="mail" required>
+            <input class="un" type="password" id="password" name="password" minlength="8" placeholder="password"
+                   required>
+
+            <input class="submit" type="submit" value="Submit!">
+            <span id="message" style="color:red"> </span>
+            <br><br><br>
+            <div class="col" style="text-align:center">
+                <a style="text-align:center" href="/register" role="button"> Don't have an account? Create one!</a><br>
+            </div>
+        </form>
+    </div>
+
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+</body>
+</html>

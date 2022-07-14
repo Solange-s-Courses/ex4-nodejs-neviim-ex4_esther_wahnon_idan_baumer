@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <script src="Javascript/register.js"></script>
+    <title><%= title %></title>
+
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="main">
+        <img class="img-fluid" src="/images/saturn.jpg" alt="...">
+        <p style="text-align:center" class="sign">Register page </p>
+        <form action="/register/choose_password" method="post"
+              onsubmit="return validate_form(this)">
+            <input class="un" type="email" id="email" name="email" placeholder="user mail" required>
+            <input class="un" type="text" id="firstName" name="firstName" placeholder="first name"
+                   pattern="^[A-Z][a-z]*$"
+                   required>
+            <input class="un" type="text" id="lastName" name="lastName" placeholder="last name" pattern="^[A-Z][a-z]*$"
+                   required>
+            <span class="un" id="validEmail" style="color:red"></span>
+            <button class="submit" type="submit" id="bottonRegister" value="Submit!">Submit!</button>
+
+            <br><br>
+            <div class="col" style="text-align:center">
+                <a style="text-align:center" href="/" role="button"> Have an account ? Log in!</a>
+
+            </div>
+        </form>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+</body>
+</html>
